@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  background-color: white;
+}
+
+.header {
+  background-color: #173563;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 50px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.lead-info {
+  text-align: right;
+  font-size: 14px;
+}
+.lead-info p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  display: flex;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.video-player {
+  flex: 2;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  color: black;
+  cursor: pointer;
+/*  font-weight: bold;*/
+  text-align: center;
+}
+
+.tabs button.active {
+  background-color: white;
+  border-bottom: 2px solid #2d3b5e;
+  color: #2d3b5e;
+}
+
+.form-section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.form-section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2d3b5e;
+}
+
+label {
+  margin: 10px 0 5px;
+/*  font-weight: bold;*/
+font-size: 11px;
+
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #2d3b5e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.match-options {
+  display: flex;
+  margin-top: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.option label {
+  margin-left: 5px;
+}
+
+.playback-overlay {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.playback-overlay label {
+  margin-left: 5px;
+}
+
+.footer {
+  background-color: #173563;
+  padding: 2px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.disclosures-text {
+  color: #ff9900;
+  cursor: pointer;
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.disclosures-text:hover {
+  color: #cc7a00;
 }
